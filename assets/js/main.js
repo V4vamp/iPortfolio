@@ -1,10 +1,4 @@
-/**
-* Template Name: iPortfolio
-* Updated: Mar 10 2023 with Bootstrap v5.2.3
-* Template URL: https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
+
 (function() {
   "use strict";
 
@@ -259,4 +253,71 @@
    */
   new PureCounter();
 
+  // Mapping portfolio contents
+
+  const portfolioItems = [
+    {
+      imgSrc: "assets/img/portfolio/portfolio-1.jpg",
+      title: "Elavayt Wepage",
+      client: "elavayt International",
+      filter: "filter-web",
+      category: "Web Page",
+      info: "Elavayt is a platform that helps users discover and connect with local businesses. Its full webpage is currently in development, using React JavaScript and SCSS for the frontend, Express.js for server-side logic, Redux for state management, and AWS for database and cloud storage. The goal of Elavayt is to streamline business discovery, making it easier for businesses to gain visibility and for customers to find the services they need.",
+      url: "https://www.elavayt.com",
+      date: "01 December, 2023"
+  },
+    {
+      imgSrc: "assets/img/portfolio/portfolio-3.jpg",
+      title: "EBiz Directory",
+      client: "elavayt International",
+      filter: "filter-app",
+      category: "Mobile Web-App",
+      info: "Ebiz Directory, a mobile web application that helps users find nearby businesses while offering business owners enhanced visibility. The platform is built using Next.js with TypeScript for strong performance and scalability, and SCSS for styling, ensuring a mobile-responsive user experience.",
+      url: "https://www.ebizdirectory.elavayt.com/",
+      date: "12 August, 2024"
+    },
+    {
+      imgSrc: "assets/img/portfolio/portfolio-9.jpg",
+      title: "Ether Beta",
+      client: "elavayt International",
+      filter: "filter-web",
+      info: "Ether is a platform aimed at connecting jobseekers with recruiters, offering tools for upskilling to enhance employability. It provides users with skills that improve their chances of being recruited. Currently in beta, the application offers a preview of the full platform, which is still under development. Built with ReactJS and mobile-responsive design, the beta version gives users insight into Ether's capabilities and future offerings.",
+      category: "Web Page",
+      url: "https://www.discover-ether.elavayt.com/",
+      date: "01 July, 2023"
+    },
+  ];
+  
+  const portfolioContainer = document.getElementById('portfolioContainer');
+  
+  portfolioItems.forEach((item, index) => {
+    const portfolioItem = document.createElement('div');
+    portfolioItem.className = `col-lg-4 col-md-6 portfolio-item ${item.filter}`;
+    
+    portfolioItem.innerHTML = `
+      <div class="portfolio-wrap">
+        <img src="${item.imgSrc}" class="img-fluid" alt="" />
+        <div class="portfolio-links">
+          <a href="portfolio-details.html?item=${index}">
+            <i class="bx bx-link"></i>
+          </a>
+        </div>
+      </div>
+    `;
+    
+    portfolioContainer.appendChild(portfolioItem);
+  });
+
+  document.getElementById("contactForm").addEventListener("submit", function(event) {
+    event.preventDefault();
+    
+    const name = document.getElementById("name").value;
+    const email = document.getElementById("email").value;
+    const subject = document.getElementById("subject").value;
+    const message = document.querySelector("textarea[name='message']").value;
+    
+    const mailtoLink = `mailto:example@domain.com?subject=${encodeURIComponent(subject)} - Message from ${encodeURIComponent(name)}&body=Name: ${encodeURIComponent(name)}%0AEmail: ${encodeURIComponent(email)}%0ASubject: ${encodeURIComponent(subject)}%0AMessage: ${encodeURIComponent(message)}`;
+    
+    window.location.href = mailtoLink;
+  });
 })()
