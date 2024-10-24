@@ -1,33 +1,33 @@
 const portfolioItems = [
   {
-    imgSrc: "assets/img/portfolio/portfolio-1.jpg",
+    imgSrc: "https://www.elavayt.com/assets/Isotope-big-BCCm8djr.png",
     title: "Elavayt Wepage",
     client: "elavayt International",
     filter: "filter-web",
     category: "Web Page",
     info: "Elavayt is a platform that helps users discover and connect with local businesses. Its full webpage is currently in development, using React JavaScript and SCSS for the frontend, Express.js for server-side logic, Redux for state management, and AWS for database and cloud storage. The goal of Elavayt is to streamline business discovery, making it easier for businesses to gain visibility and for customers to find the services they need.",
     url: "https://www.elavayt.com",
-    date: "01 December, 2023"
-},
+    date: "01 December, 2023",
+  },
   {
-    imgSrc: "assets/img/portfolio/portfolio-3.jpg",
+    imgSrc: "https://www.ebizdirectory.elavayt.com/images/logo2.png",
     title: "EBiz Directory",
     client: "elavayt International",
     filter: "filter-app",
     category: "Mobile Web-App",
     info: "Ebiz Directory, a mobile web application that helps users find nearby businesses while offering business owners enhanced visibility. The platform is built using **Next.js with TypeScript** for strong performance and scalability, and **SCSS** for styling, ensuring a mobile-responsive user experience.",
     url: "https://www.ebizdirectory.elavayt.com/",
-    date: "12 August, 2024"
+    date: "12 August, 2024",
   },
   {
-    imgSrc: "assets/img/portfolio/portfolio-9.jpg",
+    imgSrc: "assets/img/portfolio/Ether-Logo.png",
     title: "Ether Beta",
     client: "elavayt International",
     filter: "filter-web",
     info: "Ether is a platform aimed at connecting jobseekers with recruiters, offering tools for upskilling to enhance employability. It provides users with skills that improve their chances of being recruited. Currently in beta, the application offers a preview of the full platform, which is still under development. Built with ReactJS and mobile-responsive design, the beta version gives users insight into Ether's capabilities and future offerings.",
     category: "Web Page",
     url: "https://www.discover-ether.elavayt.com/",
-    date: "01 July, 2023"
+    date: "01 July, 2023",
   },
 ];
 
@@ -49,21 +49,7 @@ if (itemIndex !== null) {
                 <div class="swiper-wrapper align-items-center">
                   <div class="swiper-slide">
                     <img
-                      src="assets/img/portfolio/portfolio-details-1.jpg"
-                      alt=""
-                    />
-                  </div>
-
-                  <div class="swiper-slide">
-                    <img
-                      src="assets/img/portfolio/portfolio-details-2.jpg"
-                      alt=""
-                    />
-                  </div>
-
-                  <div class="swiper-slide">
-                    <img
-                      src="assets/img/portfolio/portfolio-details-3.jpg"
+                      src=${item.imgSrc}
                       alt=""
                     />
                   </div>
