@@ -15,7 +15,7 @@ const portfolioItems = [
     client: "elavayt International",
     filter: "filter-app",
     category: "Mobile Web-App",
-    info: "Ebiz Directory, a mobile web application that helps users find nearby businesses while offering business owners enhanced visibility. The platform is built using **Next.js with TypeScript** for strong performance and scalability, and **SCSS** for styling, ensuring a mobile-responsive user experience.",
+    info: "Ebiz Directory, a mobile web application that helps users find nearby businesses while offering business owners enhanced visibility. The platform is built using Next.js with TypeScript for strong performance and scalability, and SCSS for styling, ensuring a mobile-responsive user experience.",
     url: "https://www.ebizdirectory.elavayt.com/",
     date: "12 August, 2024",
   },
