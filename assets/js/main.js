@@ -273,7 +273,7 @@
       client: "elavayt International",
       filter: "filter-web",
       category: "Web Page",
-      info: "Elavayt is a platform that helps users discover and connect with local businesses. Its full webpage is currently in development, using React JavaScript and SCSS for the frontend, Express.js for server-side logic, Redux for state management, and AWS for database and cloud storage. The goal of Elavayt is to streamline business discovery, making it easier for businesses to gain visibility and for customers to find the services they need.",
+      info: "A full webpage currently in development, using React JavaScript and SCSS for the frontend, Express.js for server-side logic, Redux for state management, and AWS for database and cloud storage. The goal of Elavayt is to streamline business discovery, making it easier for businesses to gain visibility and for customers to find the services they need.",
       url: "https://www.elavayt.com",
       date: "01 December, 2023",
     },
@@ -297,6 +297,16 @@
       url: "https://www.discover-ether.elavayt.com/",
       date: "01 July, 2023",
     },
+    {
+      imgSrc: "assets/img/portfolio/logo.png",
+      title: "Eagle Eye Scanner",
+      client: "elavayt International",
+      filter: "filter-web",
+      info: "Eagle Eye Scanner is a web application that was built using Next.js with TypeScript for strong performance and scalability, and SCSS for styling and Nodejs for server side using expressJS. Other libraries used include Recharts for data visualation. The web application serves as a platform for data collection",
+      category: "Web Page",
+      url: "https://eagle-eye.elavayt.com/",
+      date: "01 December, 2024"
+    }
   ];
 
   const portfolioContainer = document.getElementById("portfolioContainer");
