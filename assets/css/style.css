@@ -634,8 +634,8 @@ section {
   justify-content: center;
 }
 .portfolio-item .portfolio-wrap img {
-  width: 80%;
-  width: 80%;
+  width: 50%;
+  width: 50%;
   object-fit: contain;
 }
 

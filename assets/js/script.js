@@ -40,7 +40,15 @@ const portfolioItems = [
     date: "01 December, 2024"
   },
   {
-    imgSrc: ""
+    imgSrc: "https://media.licdn.com/dms/image/v2/D4E0BAQFNZ-2qUGH2TA/company-logo_200_200/company-logo_200_200/0/1686604777400/thelearnlyapp_logo?e=2147483647&v=beta&t=UvmfYk7c8odvMgqSk4iIOTZCepXevZnwGDZ1Vnh3pNA",
+    title: "Learnly Quiz Demo-App",
+    client: "Learnly.io",
+    filter: "filter-web",
+    info: "A Quiz demo app for learnly. An educative platform built with VueJS and CSS3, with resposiveness for medium to small screens",
+    category: "Web App",
+    url: "https://gamified-learny-app.vercel.app/",
+    date: "14 February, 2025"
+
   }
 ];
 
@@ -77,7 +85,7 @@ if (itemIndex !== null) {
                 <ul>
                   <li><strong>Category</strong>: ${item.category}</li>
                   <li><strong>Client</strong>: ${item.client}</li>
-                  <li><strong>Project date</strong>: 01 December, 2023</li>
+                  <li><strong>Project date</strong>: ${item.date}</li>
                   <li>
                     <strong>Project URL</strong>:
                     <a href=${item.url}>Visit website</a>
