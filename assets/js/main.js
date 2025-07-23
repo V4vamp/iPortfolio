@@ -305,19 +305,29 @@
       info: "Eagle Eye Scanner is a web application that was built using Next.js with TypeScript for strong performance and scalability, and SCSS for styling and Nodejs for server side using expressJS. Other libraries used include Recharts for data visualation. The web application serves as a platform for data collection",
       category: "Web Page",
       url: "https://eagle-eye.elavayt.com/",
-      date: "01 December, 2024"
+      date: "01 December, 2024",
     },
     {
-      imgSrc: "data:image/svg+xml,%3csvg%20width='31'%20height='52'%20viewBox='0%200%2031%2052'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3crect%20width='15.5'%20height='17.2222'%20rx='7.75'%20fill='black'/%3e%3cpath%20d='M0%2028.417C0%2024.1368%203.46979%2020.667%207.75%2020.667C12.0302%2020.667%2015.5%2024.1368%2015.5%2028.417V46.5003C15.5%2049.3538%2013.1868%2051.667%2010.3333%2051.667C4.62639%2051.667%200%2047.0406%200%2041.3337V28.417Z'%20fill='%235111AD'/%3e%3crect%20x='3.44531'%20y='37.8896'%20width='27.5556'%20height='13.7778'%20rx='6.88889'%20fill='%235111AD'/%3e%3c/svg%3e",
+      imgSrc:
+        "data:image/svg+xml,%3csvg%20width='31'%20height='52'%20viewBox='0%200%2031%2052'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3crect%20width='15.5'%20height='17.2222'%20rx='7.75'%20fill='black'/%3e%3cpath%20d='M0%2028.417C0%2024.1368%203.46979%2020.667%207.75%2020.667C12.0302%2020.667%2015.5%2024.1368%2015.5%2028.417V46.5003C15.5%2049.3538%2013.1868%2051.667%2010.3333%2051.667C4.62639%2051.667%200%2047.0406%200%2041.3337V28.417Z'%20fill='%235111AD'/%3e%3crect%20x='3.44531'%20y='37.8896'%20width='27.5556'%20height='13.7778'%20rx='6.88889'%20fill='%235111AD'/%3e%3c/svg%3e",
       title: "Learnly Quiz Demo-App",
       client: "Learnly.io",
       filter: "filter-web",
       info: "A Quiz demo app for learnly. An educative platform built with VueJS and CSS3, with resposiveness for medium to small screens",
       category: "Web App",
       url: "https://gamified-learny-app.vercel.app/",
-      date: "14 February, 2025"
-  
-    }
+      date: "14 February, 2025",
+    },
+    {
+      imgSrc: "assets/img/portfolio/agc-news.png",
+      title: "AGC - News",
+      client: "agcnews.net",
+      filter: "filter-web",
+      info: "AGC News is a news platform that provides the latest news and updates from around the world. The website is built using Next.js with TypeScript for strong performance and scalability, and TailwindCSS for styling, ensuring a responsive user experience across devices. Third party API integration for fetching stories. It features a clean and modern design, making it easy for users to navigate and access news articles.",
+      category: "Web App",
+      url: "https://agc-news.vercel.app/",
+      date: "17 July, 2025",
+    },
   ];
 
   const portfolioContainer = document.getElementById("portfolioContainer");
@@ -345,25 +355,25 @@
     .addEventListener("submit", async function (event) {
       event.preventDefault();
 
-      const formData =  {
-          name: document.getElementById("name").value,
-          email:  document.getElementById("email").value,
-          subject:  document.getElementById("subject").value,
-          message:  document.getElementById("message").value,
-        };
+      const formData = {
+        name: document.getElementById("name").value,
+        email: document.getElementById("email").value,
+        subject: document.getElementById("subject").value,
+        message: document.getElementById("message").value,
+      };
 
-        const response = await fetch('/send-email', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json'
-          },
-          body: JSON.stringify(formData)
-        });
-        
-        if (response.ok) {
-          alert('Message sent successfully!');
-        } else {
-          alert('Failed to send message.');
-        }
+      const response = await fetch("/send-email", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        alert("Message sent successfully!");
+      } else {
+        alert("Failed to send message.");
+      }
     });
 })();

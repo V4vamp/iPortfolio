@@ -49,7 +49,17 @@ const portfolioItems = [
     url: "https://gamified-learny-app.vercel.app/",
     date: "14 February, 2025"
 
-  }
+  },
+  {
+      imgSrc: "assets/img/portfolio/agc-news.png",
+      title: "AGC - News",
+      client: "agcnews.net",
+      filter: "filter-web",
+      info: "AGC News is a news platform that provides the latest news and updates from around the world. The website is built using Next.js with TypeScript for strong performance and scalability, and TailwindCSS for styling, ensuring a responsive user experience across devices. Third party API integration for fetching stories. It features a clean and modern design, making it easy for users to navigate and access news articles.",
+      category: "Web App",
+      url: "https://agc-news.vercel.app/",
+      date: "17 July, 2025"
+    }
 ];
 
 const portfolioDetails = document.getElementById("portfolioDetails");
