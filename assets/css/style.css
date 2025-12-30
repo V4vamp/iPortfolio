@@ -155,7 +155,7 @@ h6 {
   list-style: none;
 }
 
-.nav-menu>ul>li {
+.nav-menu > ul > li {
   position: relative;
   white-space: nowrap;
 }
@@ -181,7 +181,7 @@ h6 {
 .nav-menu a:hover,
 .nav-menu .active,
 .nav-menu .active:focus,
-.nav-menu li:hover>a {
+.nav-menu li:hover > a {
   text-decoration: none;
   color: #fff;
 }
@@ -189,7 +189,7 @@ h6 {
 .nav-menu a:hover i,
 .nav-menu .active i,
 .nav-menu .active:focus i,
-.nav-menu li:hover>a i {
+.nav-menu li:hover > a i {
   color: #149ddd;
 }
 
@@ -554,11 +554,21 @@ section {
   margin-right: 0;
 }
 
-.portfolio .portfolio-wrap {
+.portfolio-item {
+  width: 33%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+}
+
+.portfolio-wrap {
   transition: 0.3s;
   position: relative;
   overflow: hidden;
   z-index: 1;
+  width: 100%;
+  height: 300px;
 }
 
 .portfolio .portfolio-wrap::before {
@@ -599,8 +609,36 @@ section {
   background: rgba(20, 157, 221, 0.95);
 }
 
-.portfolio .portfolio-wrap .portfolio-links a+a {
+.portfolio .portfolio-wrap .portfolio-links a + a {
   border-left: 1px solid #37b3ed;
+}
+
+.portfolio-title {
+  width: auto;
+  padding: 4px 12px;
+  position: absolute;
+  left: 3%;
+  top: -60px;
+  border-radius: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(20, 157, 221, 0.6);
+  transition: all ease-in-out 0.3s;
+  z-index: 3;
+
+  h4 {
+    color: #fff;
+    font-size: medium;
+    font-weight: 600;
+    padding: 0;
+    margin: 0;
+  }
+}
+
+.portfolio .portfolio-wrap:hover .portfolio-title {
+  opacity: 1;
+  top: 10px;
 }
 
 .portfolio .portfolio-wrap:hover::before {
@@ -619,24 +657,12 @@ section {
   width: 100%;
   height: auto;
 }
-.portfolio-item {
-  width: 33%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 400px;
-}
-.portfolio-item .portfolio-wrap {
+.portfolio-item .portfolio-wrap img {
   width: 100%;
   height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.portfolio-item .portfolio-wrap img {
-  width: 50%;
-  width: 50%;
-  object-fit: contain;
+  position: absolute;
+  object-fit: cover;
+  object-position: top;
 }
 
 /*--------------------------------------------------------------
@@ -650,14 +676,15 @@ section {
   width: 100%;
 } */
 .portfolio-details-slider .swiper-wrapper {
-display: flex;
-align-items: center;
-justify-content: center;
-height: 450px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 600px;
+  
 }
 .portfolio-details-slider .swiper-wrapper .swiper-slide {
-  width: 50%;
-  height: 350px;
+  width: 100%;
+  height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -673,7 +700,10 @@ height: 450px;
   position: relative;
 }
 
-.portfolio-details .portfolio-details-slider .swiper-pagination .swiper-pagination-bullet {
+.portfolio-details
+  .portfolio-details-slider
+  .swiper-pagination
+  .swiper-pagination-bullet {
   width: 12px;
   height: 12px;
   background-color: #fff;
@@ -681,7 +711,10 @@ height: 450px;
   border: 1px solid #149ddd;
 }
 
-.portfolio-details .portfolio-details-slider .swiper-pagination .swiper-pagination-bullet-active {
+.portfolio-details
+  .portfolio-details-slider
+  .swiper-pagination
+  .swiper-pagination-bullet-active {
   background-color: #149ddd;
 }
 
@@ -704,7 +737,7 @@ height: 450px;
   font-size: 15px;
 }
 
-.portfolio-details .portfolio-info ul li+li {
+.portfolio-details .portfolio-info ul li + li {
   margin-top: 10px;
 }
 
@@ -720,6 +753,7 @@ height: 450px;
 
 .portfolio-details .portfolio-description p {
   padding: 0;
+  font-size: 14px;
 }
 
 /*--------------------------------------------------------------
@@ -975,7 +1009,7 @@ height: 450px;
   font-weight: 600;
 }
 
-.contact .php-email-form .error-message br+br {
+.contact .php-email-form .error-message br + br {
   margin-top: 25px;
 }
 
@@ -1030,7 +1064,7 @@ height: 450px;
   padding: 10px 15px;
 }
 
-.contact .php-email-form button[type=submit] {
+.contact .php-email-form button[type="submit"] {
   background: #149ddd;
   border: 0;
   padding: 10px 24px;
@@ -1039,7 +1073,7 @@ height: 450px;
   border-radius: 4px;
 }
 
-.contact .php-email-form button[type=submit]:hover {
+.contact .php-email-form button[type="submit"]:hover {
   background: #37b3ed;
 }
 
@@ -1075,11 +1109,11 @@ height: 450px;
   font-size: 15px;
 }
 
-.breadcrumbs ol li+li {
+.breadcrumbs ol li + li {
   padding-left: 10px;
 }
 
-.breadcrumbs ol li+li::before {
+.breadcrumbs ol li + li::before {
   display: inline-block;
   padding-right: 10px;
   color: #0e2442;

@@ -268,7 +268,7 @@
 
   const portfolioItems = [
     {
-      imgSrc: "https://www.elavayt.com/assets/Isotope-big-BCCm8djr.png",
+      imgSrc: "assets/img/portfolio/elavayt-view.png",
       title: "Elavayt Wepage",
       client: "elavayt International",
       filter: "filter-web",
@@ -278,17 +278,17 @@
       date: "01 December, 2023",
     },
     {
-      imgSrc: "https://www.ebizdirectory.elavayt.com/images/logo2.png",
-      title: "EBiz Directory",
+      imgSrc: "assets/img/portfolio/laiflyne-view.png",
+      title: "Laiflyne",
       client: "elavayt International",
       filter: "filter-app",
       category: "Mobile Web-App",
-      info: "Ebiz Directory, a mobile web application that helps users find nearby businesses while offering business owners enhanced visibility. The platform is built using Next.js with TypeScript for strong performance and scalability, and SCSS for styling, ensuring a mobile-responsive user experience.",
-      url: "https://www.ebizdirectory.elavayt.com/",
+      info: "Laiflyne is a web application that helps users manage lifestyle-related health issues by connecting them with qualified professionals for guidance and support. My primary role on the team was as a frontend developer, where I focused on building intuitive and responsive user interfaces. In situations where the backend developer was unavailable, I also contributed to backend tasks to ensure the application functioned seamlessly.",
+      url: "https://www.laiflyne.com/",
       date: "12 August, 2024",
     },
     {
-      imgSrc: "assets/img/portfolio/Ether-Logo.png",
+      imgSrc: "assets/img/portfolio/ether-view.png",
       title: "Ether Beta",
       client: "elavayt International",
       filter: "filter-web",
@@ -298,18 +298,17 @@
       date: "01 July, 2023",
     },
     {
-      imgSrc: "assets/img/portfolio/logo.png",
+      imgSrc: "assets/img/portfolio/eagle-view.png",
       title: "Eagle Eye Scanner",
       client: "elavayt International",
       filter: "filter-web",
-      info: "Eagle Eye Scanner is a web application that was built using Next.js with TypeScript for strong performance and scalability, and SCSS for styling and Nodejs for server side using expressJS. Other libraries used include Recharts for data visualation. The web application serves as a platform for data collection",
+      info: "Eagle Eye Data Scanner is a web application I independently designed and built to collect, capture, analyze, and visualize data from various parastatals across all 36 states of Nigeria. The platform provides structured insights at state, local government, and ward levels, enabling efficient data exploration and informed decision-making. The application was developed using Next.js and TypeScript, with SCSS for scalable and maintainable styling, ensuring performance, reliability, and a clean user experience.",
       category: "Web Page",
       url: "https://eagle-eye.elavayt.com/",
       date: "01 December, 2024",
     },
     {
-      imgSrc:
-        "data:image/svg+xml,%3csvg%20width='31'%20height='52'%20viewBox='0%200%2031%2052'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3crect%20width='15.5'%20height='17.2222'%20rx='7.75'%20fill='black'/%3e%3cpath%20d='M0%2028.417C0%2024.1368%203.46979%2020.667%207.75%2020.667C12.0302%2020.667%2015.5%2024.1368%2015.5%2028.417V46.5003C15.5%2049.3538%2013.1868%2051.667%2010.3333%2051.667C4.62639%2051.667%200%2047.0406%200%2041.3337V28.417Z'%20fill='%235111AD'/%3e%3crect%20x='3.44531'%20y='37.8896'%20width='27.5556'%20height='13.7778'%20rx='6.88889'%20fill='%235111AD'/%3e%3c/svg%3e",
+      imgSrc: "assets/img/portfolio/learnly-view.png",
       title: "Learnly Quiz Demo-App",
       client: "Learnly.io",
       filter: "filter-web",
@@ -319,13 +318,33 @@
       date: "14 February, 2025",
     },
     {
-      imgSrc: "assets/img/portfolio/agc-news.png",
-      title: "AGC - News",
+      imgSrc: "assets/img/portfolio/agc-view.png",
+      title: "AGC - News Platform",
       client: "agcnews.net",
       filter: "filter-web",
       info: "AGC News is a news platform that provides the latest news and updates from around the world. The website is built using Next.js with TypeScript for strong performance and scalability, and TailwindCSS for styling, ensuring a responsive user experience across devices. Third party API integration for fetching stories. It features a clean and modern design, making it easy for users to navigate and access news articles.",
       category: "Web App",
       url: "https://agc-news.vercel.app/",
+      date: "17 July, 2025",
+    },
+    {
+      imgSrc: "assets/img/portfolio/eco-view.png",
+      title: "EcoBazaar e-commerce",
+      client: "Eco Bazaar",
+      filter: "filter-web",
+      info: "Eco Bazaar is an e-commerce shopping platform developed as a personal project to explore and strengthen my interest in Tailwind CSS. Built with TypeScript and utilizing localStorage for data persistence, the application is fully responsive and optimized for seamless use across multiple devices.",
+      category: "Web/Mobile App",
+      url: "https://bazar-shopper.vercel.app/",
+      date: "25 August, 2025",
+    },
+    {
+      imgSrc: "assets/img/portfolio/mobse-view.png",
+      title: "Niger State; Min. of Education",
+      client: "agcnews.net",
+      filter: "filter-web",
+      info: "A web application developed for the State Ministry of Basic and Secondary Education. Built using Next.js with TypeScript and SCSS for the frontend, and Express.js for the server-side architecture. The platform is currently under active development and undergoing client-driven refinements.",
+      category: "Web App",
+      url: "https://www.mobse.ni.gov.ng/",
       date: "17 July, 2025",
     },
   ];
@@ -339,6 +358,11 @@
     portfolioItem.innerHTML = `
       <div class="portfolio-wrap">
         <img src="${item.imgSrc}" class="img-fluid" alt="" />
+        <span class="portfolio-title">
+        <h4>
+        ${item.title}
+        </h4>
+        </span>
         <div class="portfolio-links">
           <a href="portfolio-details.html?item=${index}">
             <i class="bx bx-link"></i>
